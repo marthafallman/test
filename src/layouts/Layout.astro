@@ -1,22 +1,37 @@
+---
+import Card from "../components/card.astro";
+---
+
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="generator" content={Astro.generator} />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap" />
+
+    <title>Astro Basics</title>
+  </head>
+  <body>
+    <main>
+      <section class="card1">
+        <Card image="../album.jpg" artist="Black" />
+        <Card image="../album1.jpg" artist="Miley Cyrus" />
+        <Card image="../album2.jpg" artist="Bently" />
+        <Card image="../album3.jpg" artist="Rihanna" />
+        <Card image="../album4.jpg" artist="Jay Z" />
+        <Card image="../album4.jpg" artist="Jay Z" />
+      </section>
+    </main>
+  </body>
 </html>
 
 <style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
+  html,
+  body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+  }
 </style>

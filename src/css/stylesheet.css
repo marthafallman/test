@@ -1,0 +1,15 @@
+body {
+  background-color: black;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+p {
+  color: white;
+}
+.card1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+  gap: 30px;
+}
