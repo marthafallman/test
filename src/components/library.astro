@@ -1,19 +1,22 @@
 ---
 import Card from "./card.astro";
 import Cardlibrary from "./cardlibrary.astro";
+import Footer from "./footer.astro";
 ---
 
-<section>
+<section class="library">
   <h1>Your Library</h1>
   <Cardlibrary title="Create your first playlist" subtitle="It´s easy, we'll help you" buttontext="Create playlist" />
   <Cardlibrary title="Let's find some podcasts to follow" subtitle="We'll keep you updated on new episodes" buttontext="Browse podcasts" />
 
   <section>
+    <Footer />
     <style>
       h1 {
         color: #b3b3b3;
-        font-size: 20px;
+        font-size: 17px;
         padding-left: 30px;
+        margin-bottom: 40px;
       }
     </style>
   </section>

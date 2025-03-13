@@ -16,5 +16,29 @@ p {
 
 main {
   display: grid;
-  grid-template-columns: 2fr 4.3fr;
+  grid-template-columns: 2fr 4.8fr;
+  gap: 8px;
+  margin-left: 7px;
+}
+
+.cardsection {
+  background: linear-gradient(to bottom, #1f1f1f, #000000);
+  padding: 0px 25px 25px 25px;
+  border-radius: 10px;
+  padding-top: 15px;
+}
+
+.library {
+  background-color: #121212;
+  border-radius: 10px;
+  padding-top: 13px;
+}
+
+h1 {
+  font-size: 25px;
+}
+
+button:hover {
+  transform: scale(1.04);
+  background-color: #f0f0f0;
 }

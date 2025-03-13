@@ -1,0 +1,40 @@
+---
+const { text, buttonText } = Astro.props;
+import Button from "./button.astro";
+---
+
+<div class="sticky-banner">
+  <div class="banner-text">
+    <h1>Preview of Spotify</h1>
+    <p>{text}</p>
+  </div>
+  <Button buttontext="Sign up for free" />
+</div>
+
+<style>
+  .sticky-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 97%;
+    background: linear-gradient(to right, #ae2997, #509cf5);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    padding-top: 5px;
+    padding-right: 70px;
+    font-size: 15px;
+    margin: 5px;
+  }
+
+  .banner-text {
+    flex: 1;
+  }
+
+  h1 {
+    font-size: 13px;
+    margin-bottom: -12px;
+  }
+</style>
