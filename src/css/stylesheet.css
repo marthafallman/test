@@ -13,3 +13,8 @@ p {
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   gap: 30px;
 }
+
+main {
+  display: grid;
+  grid-template-columns: 2fr 4.3fr;
+}

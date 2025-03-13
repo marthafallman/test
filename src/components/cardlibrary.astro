@@ -1,0 +1,38 @@
+---
+const { title, subtitle, buttontext } = Astro.props;
+---
+
+<article>
+  <h1>{title}</h1>
+  <h2>{subtitle}</h2>
+  <button>{buttontext}</button>
+</article>
+
+<style>
+  h2 {
+    font-size: 14px;
+    font-weight: 200;
+    color: rgb(227, 226, 226);
+  }
+
+  h1 {
+    font-size: 15px;
+  }
+
+  article {
+    padding: 1px 10px 20px 20px;
+    background-color: #1f1f1f;
+    margin: 20px;
+    border-radius: 10px;
+  }
+
+  button {
+    padding: 7px 30px 7px 30px;
+    background-color: white;
+    border-radius: 30px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: 800;
+    border: none;
+    margin-top: 10px;
+  }
+</style>
