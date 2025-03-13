@@ -1,0 +1,143 @@
+---
+import Button from "./button.astro";
+const { image } = Astro.props;
+---
+
+<nav class="top-nav">
+  <!-- Vänster sektion: Logo + Home -->
+  <div class="left">
+    <div class="left-section">
+      <a href="index.html"><img src="logo.png" alt="logo" class="nav-icon" /></a>
+      <a href="index.html"><img src="home.png" alt="home" class="nav-icon" /></a>
+    </div>
+
+    <!-- Sökfält -->
+    <div class="search-bar">
+      <input type="text" placeholder="What do you want to play?" />
+      <div class="divider"></div>
+    </div>
+  </div>
+
+  <!-- Navigationslänkar -->
+  <div class="nav-links">
+    <div class="left-menu">
+      <a href="#">Premium</a>
+      <a href="#">Support</a>
+      <a href="#">Download</a>
+    </div>
+    <div class="divider"></div>
+    <div class="right-menu">
+      <a href="#"> Install app</a>
+      <a href="#">Sign up</a>
+    </div>
+    <Button buttontext="Log in" />
+  </div>
+</nav>
+
+<style>
+  img {
+    max-width: 50px;
+  }
+
+  /* Huvudnav */
+  .top-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    margin-left: 17px;
+    margin-right: 10px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+
+  /* Vänster sektion: Logo + Home */
+  .left-section {
+    display: flex;
+    justify-content: left;
+    gap: 10px;
+  }
+
+  /* Sökfält */
+  .search-bar {
+    display: flex;
+    align-items: left;
+    background-color: #181818;
+    border-radius: 50px;
+    padding: 5px 30px 5px 15px;
+    height: 38px;
+    width: 450px;
+  }
+
+  .search-bar .icon {
+    color: #b3b3b3;
+    font-size: 18px;
+  }
+
+  .search-bar input {
+    flex: 1;
+    background: none;
+    border: none;
+    outline: none;
+    color: #b3b3b3;
+    font-size: 16px;
+    margin-left: 10px;
+  }
+
+  .search-bar .divider {
+    height: 20px;
+    width: 1px;
+    background-color: #b3b3b3;
+    margin: 10px 20px 20px 20px;
+  }
+
+  .search-bar input::placeholder {
+    color: #b3b3b3;
+  }
+
+  /* Navigationslänkar */
+  .nav-links {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  .left-menu,
+  .right-menu {
+    display: flex;
+    gap: 15px;
+  }
+
+  .nav-links a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+  }
+
+  .nav-links a:hover {
+    color: white;
+  }
+
+  .divider {
+    height: 16px;
+    width: 1px;
+    background-color: #b3b3b3;
+    margin: 0 15px;
+  }
+
+  .icon {
+    font-size: 14px;
+    margin-right: 5px;
+  }
+
+  .left {
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  a {
+    font-size: 10px;
+  }
+</style>

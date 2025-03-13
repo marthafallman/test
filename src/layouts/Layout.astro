@@ -2,7 +2,8 @@
 import Card from "../components/card.astro";
 import Cardsong from "../components/cardsong.astro";
 import Library from "../components/library.astro";
-import Cardlibrary from "../components/cardlibrary.astro";
+import Nav from "../components/nav.astro";
+import Banner from "../components/banner.astro";
 ---
 
 <!doctype html>
@@ -17,31 +18,37 @@ import Cardlibrary from "../components/cardlibrary.astro";
     <title>Astro Basics</title>
   </head>
   <body>
+    <header>
+      <Nav />
+    </header>
     <main>
       <Library />
 
-      <div>
-        <h1>Toppartister</h1>
+      <div class="cardsection">
+        <h1>Popular Artists</h1>
         <section class="card1">
           <Card image="../album.jpg" artist="Black" />
           <Card image="../album1.jpg" artist="Miley Cyrus" />
           <Card image="../album2.jpg" artist="Bently" />
           <Card image="../album3.jpg" artist="Rihanna" />
           <Card image="../album4.jpg" artist="Jay Z" />
-          <Card image="../album4.jpg" artist="Jay Z" />
+          <Card image="../album5.jpg" artist="Black Eyed Peas" />
         </section>
 
-        <h1>Populära album och singlar</h1>
+        <h1>Popular albums and singles</h1>
         <section class="card1">
-          <Cardsong image="../album.jpg" song="Black" album="Album" />
-          <Cardsong image="../album1.jpg" song="Miley Cyrus" album="Album" />
-          <Cardsong image="../album2.jpg" song="Bently" album="Album" />
-          <Cardsong image="../album3.jpg" song="Rihanna" album="Album" />
-          <Cardsong image="../album4.jpg" song="Jay Z" album="Album" />
-          <Cardsong image="../album4.jpg" song="Jay Z" album="Album" />
+          <Cardsong image="../song1.jpg" song="Blinding Lights" album="The Weeknd" />
+          <Cardsong image="../song2.jpg" song="Future Nostalgia" album="Dua Lipa" />
+          <Cardsong image="../song3.jpg" song="Shape of You" album="Ed Sheeran" />
+          <Cardsong image="../song4.jpg" song="Beerbong" album="Post Malone" />
+          <Cardsong image="../song5.jpg" song=" Bad Guy" album="Billie Eilish" />
+          <Cardsong image="../song6.jpg" song="Fine Line" album="Harry Styles" />
         </section>
       </div>
     </main>
+    <footer>
+      <Banner text="Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed." buttonText="Sign up for free" />
+    </footer>
   </body>
 </html>
 
