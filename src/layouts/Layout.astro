@@ -1,5 +1,8 @@
 ---
 import Card from "../components/card.astro";
+import Cardsong from "../components/cardsong.astro";
+import Library from "../components/library.astro";
+import Cardlibrary from "../components/cardlibrary.astro";
 ---
 
 <!doctype html>
@@ -15,14 +18,29 @@ import Card from "../components/card.astro";
   </head>
   <body>
     <main>
-      <section class="card1">
-        <Card image="../album.jpg" artist="Black" />
-        <Card image="../album1.jpg" artist="Miley Cyrus" />
-        <Card image="../album2.jpg" artist="Bently" />
-        <Card image="../album3.jpg" artist="Rihanna" />
-        <Card image="../album4.jpg" artist="Jay Z" />
-        <Card image="../album4.jpg" artist="Jay Z" />
-      </section>
+      <Library />
+
+      <div>
+        <h1>Toppartister</h1>
+        <section class="card1">
+          <Card image="../album.jpg" artist="Black" />
+          <Card image="../album1.jpg" artist="Miley Cyrus" />
+          <Card image="../album2.jpg" artist="Bently" />
+          <Card image="../album3.jpg" artist="Rihanna" />
+          <Card image="../album4.jpg" artist="Jay Z" />
+          <Card image="../album4.jpg" artist="Jay Z" />
+        </section>
+
+        <h1>Populära album och singlar</h1>
+        <section class="card1">
+          <Cardsong image="../album.jpg" song="Black" album="Album" />
+          <Cardsong image="../album1.jpg" song="Miley Cyrus" album="Album" />
+          <Cardsong image="../album2.jpg" song="Bently" album="Album" />
+          <Cardsong image="../album3.jpg" song="Rihanna" album="Album" />
+          <Cardsong image="../album4.jpg" song="Jay Z" album="Album" />
+          <Cardsong image="../album4.jpg" song="Jay Z" album="Album" />
+        </section>
+      </div>
     </main>
   </body>
 </html>
