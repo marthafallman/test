@@ -6,8 +6,15 @@ import Footer from "./footer.astro";
 
 <section class="library">
   <h1>Your Library</h1>
-  <Cardlibrary title="Create your first playlist" subtitle="It´s easy, we'll help you" buttontext="Create playlist" />
-  <Cardlibrary title="Let's find some podcasts to follow" subtitle="We'll keep you updated on new episodes" buttontext="Browse podcasts" />
+  <Cardlibrary buttontext="Create playlist">
+    <span slot="title">Create your first playlist</span>
+    <span slot="subtitle">It's easy, we'll help you</span>
+  </Cardlibrary>
+
+  <Cardlibrary buttontext="Browse podcasts">
+    <span slot="title">Let's find some podcasts to follow</span>
+    <span slot="subtitle">We'll keep you updated on new episodes</span>
+  </Cardlibrary>
 
   <section>
     <Footer />

@@ -23,7 +23,7 @@ h1 {
 .cardline {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-  gap: 30px;
+  gap: 20px;
 }
 
 main {
@@ -43,4 +43,8 @@ main {
 button:hover {
   transform: scale(1.04);
   background-color: var(--hover-color);
+}
+
+img {
+  width: 100%;
 }

@@ -1,18 +1,20 @@
 ---
-const { artist, image } = Astro.props;
+const { artist, image, variant, album } = Astro.props;
 ---
 
-<article>
+<article class={`cardcontainer ${variant ? variant : ""}`}>
   <img src={image} alt={artist} />
+  <div class="overlay"></div>
+
   <h1>{artist}</h1>
-  <h2>Artist</h2>
+  <h2>{album}</h2>
 </article>
 
 <style>
   article img {
     aspect-ratio: 1/1;
     max-width: 100%;
-    border-radius: 50%;
+    /* border-radius: 50%; */
   }
 
   h2 {
@@ -24,5 +26,42 @@ const { artist, image } = Astro.props;
   h1 {
     font-weight: 400;
     font-size: 17px;
+    margin-bottom: -10px;
+  }
+
+  .overlay {
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    width: 60px; /* Justera storlek */
+    height: 60px;
+    background: url("play.png") no-repeat center;
+    background-size: contain;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition:
+      opacity 0.3s ease-in-out,
+      transform 0.3s ease-in-out;
+  }
+
+  .cardcontainer:hover .overlay {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+
+  .cardcontainer {
+    position: relative; /* Gör att .overlay blir absolut relativt denna */
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Variant för rundade bilder */
+  .cardcontainer.round img {
+    border-radius: 50%;
+  }
+
+  /* Variant för fyrkantiga bilder */
+  .cardcontainer.square img {
+    border-radius: 5px;
   }
 </style>
